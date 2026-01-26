@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaa — Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+    color: #222;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    color: #ff9a9e;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* PROFILE IMAGE */
+.profile {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    filter: brightness(90%) contrast(110%);
+}
+
+/* TWO COLUMNS */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.col {
+    width: 35%;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* TABLE */
+table {
+    margin: auto;
+    width: 60%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.6);
+}
+
+th {
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #222;
+}
+
+/* TEXT OVER IMAGE */
+.img-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.banner {
+    width: 600px;
+    border-radius: 10px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+/* IMAGE FADE */
+.fade-box {
+    position: relative;
+    display: inline-block;
+}
+
+.fade-img {
+    width: 500px;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+}
+
+.fade-box:hover .fade-img {
+    opacity: 0.3;
+}
+
+.fade-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    font-size: 24px;
+    color: #222;
+}
+
+.fade-box:hover .fade-text {
+    opacity: 1;
+}
+
+/* VIDEO */
+.video, .video2 {
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* VIDEO OVERLAY */
+.video-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.video-caption {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+/* PARAGRAPH HOVER */
+.hover {
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.hover:hover {
+    color: #ff0080;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#bio">About</a>
+    <a href="#skills">Skills</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section">
+    <h1>Asmaa's Creative Portfolio</h1>
+    <img src="https://picsum.photos/300" class="profile">
+</section>
+
+<!-- BIO -->
+<section id="bio" class="section">
+    <h2>About Me</h2>
+
+    <div class="columns">
+        <div class="col">
+            <p>I’m Asmaa, a student passionate about design, coding, and creativity.</p>
+        </div>
+        <div class="col">
+            <p>I enjoy building colorful, expressive websites and learning new skills.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TABLE -->
+<section id="skills" class="section">
+    <h2>My Skills</h2>
+
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Beginner</td>
+        </tr>
+    </table>
+</section>
+
+<!-- TEXT OVER IMAGE -->
+<section class="section">
+    <h2>Text Over Image</h2>
+
+    <div class="img-wrap">
+        <img src="https://picsum.photos/600/300" class="banner">
+        <div class="banner-text">Design. Learn. Create.</div>
+    </div>
+</section>
+
+<!-- IMAGE FADE -->
+<section class="section">
+    <h2>Hover Fade Effect</h2>
+
+    <div class="fade-box">
+        <img src="https://picsum.photos/500/300" class="fade-img">
+        <div class="fade-text">Hover Me</div>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section">
+    <h2>Autoplay Video</h2>
+
+    <video autoplay muted loop class="video">
+        <source src="your-video.mp4">
+    </video>
+</section>
+
+<!-- VIDEO TEXT OVERLAY -->
+<section class="section">
+    <h2>Video Overlay</h2>
+
+    <div class="video-wrap">
+        <video autoplay muted loop class="video2">
+            <source src="your-video.mp4">
+        </video>
+        <div class="video-caption">Welcome to My Portfolio</div>
+    </div>
+</section>
+
+<!-- PARAGRAPH HOVER -->
+<section class="section">
+    <h2>Paragraph Hover</h2>
+    <p class="hover">Hover over this text to see the effect.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Asmaa — Portfolio</p>
+</footer>
+
+</body>
+</html>
